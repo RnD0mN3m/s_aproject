@@ -26,17 +26,18 @@ class ScoreAggregateappPost(models.Model):
     comment = models.TextField(
         verbose_name='コメント',
         )
-    image1 = models.ImageField(
-        verbose_name='イメージ１',
-        upload_to = 'score_aggregateapps'
-        )
-    image2 = models.ImageField(
-        verbose_name='イメージ２',
-        upload_to = 'score_aggregateapps'
-        )
+    # image1 = models.ImageField(
+    #     verbose_name='イメージ１',
+    #     upload_to = 'score_aggregateapps'
+    #     )
+    # image2 = models.ImageField(
+    #     verbose_name='イメージ２',
+    #     upload_to = 'score_aggregateapps'
+    #     )
     posted_at = models.DateTimeField(
         verbose_name='投稿日時',
         auto_now_add=True
         )
     def __str__(self):
         return self.title
+        

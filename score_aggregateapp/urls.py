@@ -2,7 +2,10 @@ from django.urls import path
 from . import views
 app_name = 'score_aggregateapp'
 urlpatterns = [
-
+    path('contact/',
+        views.ContactView.as_view(),
+        name='contact'
+        ),
     path('', views.IndexView.as_view(), name='index'),
     path('post/', views.CreateScoreAggregateappView.as_view(), name='post'),
     path('post_done/',
@@ -24,5 +27,5 @@ urlpatterns = [
     path('score_aggregateapp/<int:pk>/delete/',
          views.ScoreAggregateappDeleteView.as_view(),
          name= 'score_aggregateapp_delete'
-        ),
+        ),     
     ]

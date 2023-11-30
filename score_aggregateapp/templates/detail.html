@@ -9,10 +9,6 @@
                 <p>{{object.comment}}</p>
                 <br>
                 <p>{{object.posted_at}}に投稿</p>
-                <p><img src="{{ object.image1.url }}"></img></p>
-                {% if object.image2 %}
-                    <p><img src="{{ object.image2.url }}"></img></p>
-                {% endif %}
                 {% if request.user == object.user %}
                 <form method="POST">
                 <a href="{% url 'score_aggregateapp:score_aggregateapp_delete' object.pk %}" class="btn btn-primary my-2">削除する</a>

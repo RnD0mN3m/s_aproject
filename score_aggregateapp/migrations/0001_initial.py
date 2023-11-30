@@ -43,18 +43,6 @@ class Migration(migrations.Migration):
                 ("title", models.CharField(max_length=200, verbose_name="タイトル")),
                 ("comment", models.TextField(verbose_name="コメント")),
                 (
-                    "image1",
-                    models.ImageField(
-                        upload_to="score_aggregateapps", verbose_name="イメージ１"
-                    ),
-                ),
-                (
-                    "image2",
-                    models.ImageField(
-                        upload_to="score_aggregateapps", verbose_name="イメージ２"
-                    ),
-                ),
-                (
                     "posted_at",
                     models.DateTimeField(auto_now_add=True, verbose_name="投稿日時"),
                 ),
